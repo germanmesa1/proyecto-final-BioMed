@@ -18,9 +18,9 @@ from matplotlib.figure import Figure
 import scipy.io
 import pandas as pd
 
-class DatabaseManager:
+class DatabaseManager:          # Clase principal para gestionar la conexión y operaciones con la base de datos
     def __init__(self):
-        self.conn = sqlite3.connect('biomed.db')
+        self.conn = sqlite3.connect('biomed.db')              # Conexión SQLite con detección automática de esquema
         self.create_tables()
     
     def create_tables(self):
