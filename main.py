@@ -207,7 +207,7 @@ class LoginWindow(QMainWindow):
         container.setLayout(layout)
         self.setCentralWidget(container)
         
-        self.btn_login.clicked.connect(self.handle_login)
+        self.btn_login.clicked.connect(self.handle_login)            #  Conexión de señales (eventos)
         self.btn_register.clicked.connect(self.handle_register)
     
     def handle_login(self):
