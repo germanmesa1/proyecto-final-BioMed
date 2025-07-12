@@ -211,7 +211,7 @@ class LoginWindow(QMainWindow):
         self.btn_register.clicked.connect(self.handle_register)
     
     def handle_login(self):          #  Valida credenciales contra la base de datos
-        username = self.username.text()
+        username = self.username.text()       # Elimina espacios en blanco
         password = self.password.text()
         
         if not username or not password:
