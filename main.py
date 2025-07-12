@@ -210,7 +210,7 @@ class LoginWindow(QMainWindow):
         self.btn_login.clicked.connect(self.handle_login)            #  Conexión de señales (eventos)
         self.btn_register.clicked.connect(self.handle_register)
     
-    def handle_login(self):
+    def handle_login(self):          #  Valida credenciales contra la base de datos
         username = self.username.text()
         password = self.password.text()
         
