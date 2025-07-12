@@ -21,7 +21,7 @@ import pandas as pd
 class DatabaseManager:          # Clase principal para gestionar la conexión y operaciones con la base de datos
     def __init__(self):
         self.conn = sqlite3.connect('biomed.db')              # Conexión SQLite con detección automática de esquema
-        self.create_tables()
+        self.create_tables()                       # Asegura que las tablas existan al iniciar
     
     def create_tables(self):
         cursor = self.conn.cursor()
