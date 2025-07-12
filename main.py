@@ -127,7 +127,7 @@ class LoginWindow(QMainWindow):
         self.setWindowTitle("BioMed Login")
         self.setFixedSize(350, 500)
         
-        self.setStyleSheet("""
+        self.setStyleSheet("""       # Estilo CSS para componentes (QSS)
             QMainWindow {
                 background-color: #f5f5f5;
             }
