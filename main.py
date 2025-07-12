@@ -218,7 +218,7 @@ class LoginWindow(QMainWindow):
             QMessageBox.warning(self, "Error", "Por favor complete todos los campos")
             return
             
-        user = self.db.login_user(username, password)
+        user = self.db.login_user(username, password)                   # Consulta la base de datos (DatabaseManager)
         if user:
             self.hide()
             if self.main_window is None:
