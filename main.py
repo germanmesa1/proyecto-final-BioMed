@@ -33,7 +33,7 @@ class DatabaseManager:          # Clase principal para gestionar la conexión y 
                 user_type TEXT NOT NULL  -- 'imagen' o 'senal'
             )
         ''')
-        cursor.execute('''
+        cursor.execute('''                       #  Tabla para metadatos DICOM (relacionada con usuarios via user_id)
             CREATE TABLE IF NOT EXISTS dicom_files (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 patient_id TEXT,
