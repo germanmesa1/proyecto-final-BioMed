@@ -123,7 +123,7 @@ class LoginWindow(QMainWindow):
         self.main_window = None
         self.setup_ui()
     
-    def setup_ui(self):
+    def setup_ui(self):         #  Configuración inicial de la UI (ejecutado en __init__)
         self.setWindowTitle("BioMed Login")
         self.setFixedSize(350, 500)
         
