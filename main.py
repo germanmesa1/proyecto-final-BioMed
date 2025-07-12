@@ -184,9 +184,8 @@ class LoginWindow(QMainWindow):
         self.password.setEchoMode(QLineEdit.Password)
         layout.addWidget(self.password)
         
-        self.user_type_group = QGroupBox("Tipo de Usuario")
+        self.user_type_group = QGroupBox("Tipo de Usuario")           #  Grupo de radio buttons para selección de rol
         type_layout = QVBoxLayout()
-        
         self.btn_imagen = QRadioButton("Experto en Imágenes")
         self.btn_senal = QRadioButton("Experto en Señales")
         self.btn_imagen.setChecked(True)
