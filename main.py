@@ -250,7 +250,7 @@ class ImageExpertWindow(QMainWindow):
         self.dicom_volume = None
         self.setup_ui()
     
-    def setup_ui(self):
+    def setup_ui(self):                                                                            #Configura la interfaz de usuario
         self.setWindowTitle("BioMed Analyzer - Experto en Imágenes")
         self.setGeometry(100, 100, 1000, 700)
         
@@ -376,7 +376,7 @@ class ImageExpertWindow(QMainWindow):
         tab.setLayout(layout)
         self.tabs.addTab(tab, "Análisis de Imágenes")
     
-    def load_dicom(self):
+    def load_dicom(self):                                                                                        #Permite cargar imágenes DICOM desde una carpeta
         dir_path = QFileDialog.getExistingDirectory(self, "Seleccionar carpeta DICOM")
         if dir_path:
             try:
