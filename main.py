@@ -437,7 +437,7 @@ class ImageExpertWindow(QMainWindow):
             except Exception as e:
                 QMessageBox.critical(self, "Error", f"Error al convertir: {str(e)}")
     
-    def view_nifti(self):
+    def view_nifti(self):                                                                                                                #Carga un archivo NIfTI y lo visualiza
         filepath, _ = QFileDialog.getOpenFileName(self, "Abrir NIfTI", "", "NIfTI (*.nii *.nii.gz)")
         if filepath:
             try:
