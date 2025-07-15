@@ -71,7 +71,7 @@ class DatabaseManager:          # Clase principal para gestionar la conexión y 
         ''')
         self.conn.commit()
     
-    def register_user(self, username, password, user_type):
+    def register_user(self, username, password, user_type):                #Permite registrar un nuevo usuario
         try:
             hashed = hashlib.sha256(password.encode()).hexdigest()
             cursor = self.conn.cursor()
