@@ -89,7 +89,7 @@ class DatabaseManager:          # Clase principal para gestionar la conexión y 
                       (username, hashed))
         return cursor.fetchone()
 
-    def save_dicom_analysis(self, patient_id, patient_name, dicom_path, nifti_path, user_id):
+    def save_dicom_analysis(self, patient_id, patient_name, dicom_path, nifti_path, user_id):                              # Guarda análisis DICOM en la base de datos
         cursor = self.conn.cursor()
         cursor.execute('''
             INSERT INTO dicom_files 
