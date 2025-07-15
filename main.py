@@ -82,14 +82,14 @@ class DatabaseManager:          # Clase principal para gestionar la conexión y 
         except sqlite3.IntegrityError:
             return False
     
-    def login_user(self, username, password):
+    def login_user(self, username, password):                                    #Permite autenticar usuario
         hashed = hashlib.sha256(password.encode()).hexdigest()
         cursor = self.conn.cursor()
         cursor.execute('SELECT id, user_type FROM users WHERE username=? AND password=?', 
                       (username, hashed))
         return cursor.fetchone()
 
-    def save_dicom_analysis(self, patient_id, patient_name, dicom_path, nifti_path, user_id):
+    def save_dicom_analysis(self, patient_id, patient_name, dicom_path, nifti_path, user_id):            #Acá se guarda analisis DICOM en la base de datos
         cursor = self.conn.cursor()
         cursor.execute('''
             INSERT INTO dicom_files 
@@ -98,7 +98,7 @@ class DatabaseManager:          # Clase principal para gestionar la conexión y 
         ''', (patient_id, patient_name, dicom_path, nifti_path, user_id))
         self.conn.commit()
 
-    def save_image_analysis(self, file_path, analysis_type, params, result, user_id):
+    def save_image_analysis(self, file_path, analysis_type, params, result, user_id):                #Permite guardar análisis de imagen
         cursor = self.conn.cursor()
         cursor.execute('''
             INSERT INTO image_analysis 
