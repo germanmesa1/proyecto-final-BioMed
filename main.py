@@ -409,7 +409,7 @@ class ImageExpertWindow(QMainWindow):
             except Exception as e:
                 QMessageBox.critical(self, "Error", f"Error al cargar DICOM: {str(e)}")
     
-    def update_dicom_view(self):
+    def update_dicom_view(self):                                                                                        #Actualiza las vistas de los cortes axiales, coronales y sagitales
         if hasattr(self, 'dicom_volume'):
             slices = [
                 self.dicom_volume[self.slider_axial.value(), :, :],
